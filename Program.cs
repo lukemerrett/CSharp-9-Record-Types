@@ -10,6 +10,7 @@ namespace CSharp_9_Record_Types
 
         // Creates a Record type using the longhand syntax
         // The longhand still requires you to add a constructor and the underlying properties
+        // Gives you more control over the constructor
         // However carries the same Record type benefits of equality checks
         public record Animal
         {
@@ -33,7 +34,7 @@ namespace CSharp_9_Record_Types
             var turtle = new Turtle("Mr Scruff", position, 90, PenState.Down, Colour.Green);
 
             // Benefit 1 of Record Types: standardised & clean string output of the type
-            Console.WriteLine(turtle); // Outputs: "Turtle { Name = Shorty, position = Position { X = 10, Y = 20 }, Angle = 90, PenState = Down, Colour = Green }"
+            Console.WriteLine(turtle); // Outputs: "Turtle { Name = Mr Scruff, position = Position { X = 10, Y = 20 }, Angle = 90, PenState = Down, Colour = Green }"
 
             /* Benefit 2 of Record Types: they are immutable, all properties are read-only and assigned through the constructor only
              * Encourages the use of immutability in your application, simplifying behaviour and testability.
